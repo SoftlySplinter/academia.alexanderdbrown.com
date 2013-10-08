@@ -1,4 +1,4 @@
-<?php require 'talks.php'; ?>
+<?php require '../lib/talks.php'; ?>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -15,8 +15,8 @@
     <div id="navigation">
       <ul id="navbar">
         <li><a href="/">Home</a></li>
-        <li><a href="/mobile">Mobile</a></li>
-        <li class="selected"><a href="/talks">Talks</a></li>
+        <li><a href="/mobile/">Mobile</a></li>
+        <li class="selected"><a href="/talks/">Talks</a></li>
       </ul>
     </div>
     <div id="about">
@@ -35,7 +35,7 @@
                      <li class="talk-event">%s</li>
                      <li class="talk-date">%s</li>';
             $date = date('l j<\s\up>S</\s\up> F, Y', strtotime($talk->t_date));
-            echo sprintf($html, $talk->t_href, $talk->t_name, $talk->t_event, $date);
+            echo sprintf($html, $talk->t_file, $talk->t_name, $talk->t_event, $date);
           }
         ?>
       </ul>
