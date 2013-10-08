@@ -1,0 +1,19 @@
+.pub-title {
+  text-align: left !important;
+  font: bold 110% sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.pub-authors {
+  font: italic 100% sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.pub-conference {
+  font: 80% sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.pub-date {
+  font: 60% sans-serif;
+}

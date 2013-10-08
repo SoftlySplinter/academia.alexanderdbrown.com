@@ -1,0 +1,25 @@
+@media screen and (min-width : 50em) {
+  #header h1 {
+    font: bold 250% sans-serif !important;
+  }
+
+  #content {
+    margin: 0;
+    max-width: 70em;
+    width: 50%;
+    padding: 0 2.5% 0 10%;
+    float: left;
+  }
+
+  #about {
+    margin: 0;
+    float: right;
+    max-width: 30em;
+    width: 25%;
+    padding: 0 10% 0 2.5%;
+  }
+
+  #footer {
+    clear: both;
+  }
+}

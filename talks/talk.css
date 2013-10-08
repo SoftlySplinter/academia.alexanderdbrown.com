@@ -1,0 +1,17 @@
+.talk-name {
+  font: bold 100% sans-serif;
+  padding-bottom: 0em !important;
+}
+
+.talk-name a {
+  text-decoration: none;
+}
+
+.talk-event {
+  font: italic 80% sans-serif;
+  padding-bottom: 0em !important;
+}
+
+.talk-date {
+  font: 60% sans-serif;
+}
