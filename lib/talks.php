@@ -14,7 +14,7 @@
     }
 
     static function cmp($a, $b) {
-      return strtotime($a->t_date ) - strtotime($b->t_date);
+      return strtotime($b->t_date ) - strtotime($a->t_date);
     }
   }
 
