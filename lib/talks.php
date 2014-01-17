@@ -13,8 +13,8 @@
       $this->t_date = $temp[3];
     }
 
-    function cmp($a, $b) {
-      return strtotime($b->t_date ) - strtotime($a->t_date);
+    static function cmp($a, $b) {
+      return strtotime($a->t_date ) - strtotime($b->t_date);
     }
   }
 
