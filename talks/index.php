@@ -15,8 +15,8 @@
     <div id="navigation">
       <ul id="navbar">
         <li><a href="/">Home</a></li>
-        <li><a href="/mobile/">Mobile</a></li>
         <li class="selected"><a href="/talks/">Talks</a></li>
+        <li><a href="http://blog.alexanderdbrown.com">Blog</a></li>
       </ul>
     </div>
     <div id="about">
