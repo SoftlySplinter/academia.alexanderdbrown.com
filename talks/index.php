@@ -30,12 +30,17 @@
       <h2>Talks and Presentations</h2>
       <ul class="no-list">
         <?php 
-          foreach(get_talks() as $talk) {
-            $html = '<li class="talk-name"><a href="%s">%s</a>
-                     <li class="talk-event">%s</li>
-                     <li class="talk-date">%s</li>';
-            $date = date('l j<\s\up>S</\s\up> F, Y', strtotime($talk->t_date));
-            echo sprintf($html, $talk->t_file, $talk->t_name, $talk->t_event, $date);
+          $talks = get_talks('/data/talks');
+          if(empty($talks)) {
+            echo '<li class="no-talks">No Talks</li>';
+          } else {
+            foreach(get_talks('/data/talks') as $talk) {
+              $html = '<li class="talk-name"><a href="%s">%s</a>
+                       <li class="talk-event">%s</li>
+                       <li class="talk-date">%s</li>';
+              $date = date('l j<\s\up>S</\s\up> F, Y', strtotime($talk->t_date));
+              echo sprintf($html, $talk->t_file, $talk->t_name, $talk->t_event, $date);
+            }
           }
         ?>
       </ul>

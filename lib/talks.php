@@ -18,11 +18,9 @@
     }
   }
 
-  $talk_file = '/talks/talks';
-
-  function get_talks() {
+  function get_talks($talk_file = 'talks') {
     $talks = array();
-    $f = fopen('talks', 'r') or die('Could not open file: ' + $talk_file);
+    $f = fopen($_SERVER['DOCUMENT_ROOT'] . $talk_file, 'r') or die('Could not open file: ' + $talk_file);
     while(!feof($f)) {
       $line = fgets($f);
       if(!empty($line)) {
