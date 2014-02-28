@@ -10,6 +10,13 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font: 125% sans-serif;
+  padding-top: 1em;
+  padding-bottom: 0;
+  margin: 0;
+}
+
 p {
   margin: 0;
   padding-top: 0.1em;
@@ -46,7 +53,7 @@ ul {
 
 #navbar {
   list-style: none;
-  font: 150% sans-serif;
+  font: 125% sans-serif;
   padding: 0.5em 0 0.5em 0;
   margin: 0;
 }
@@ -92,4 +99,35 @@ ul {
 
 .no-list li {
   padding-bottom: 2em;
+}
+
+.title {
+  padding-top: 1em;
+  text-align: left !important;
+  font: bold 110% sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.title:first-child {
+  padding-top: 0 !important;
+}
+
+.author {
+  font: italic 100% sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.conference {
+  font: 80% sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.date {
+  font: 60% sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.note {
+  font: 50% sans-serif;
+  padding-bottom: 0 !important;
 }

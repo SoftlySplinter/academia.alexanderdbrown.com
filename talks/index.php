@@ -1,4 +1,8 @@
-<?php require '../lib/talks.php'; ?>
+<?php 
+require_once( $_SERVER['DOCUMENT_ROOT'] . '/lib/talks.php');
+?>
+
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -6,7 +10,6 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/default.css" rel="stylesheet" type="text/css">
     <link href="/desktop.css" rel="stylesheet" type="text/css">
-    <link href="/talks/talk.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div id="header">
@@ -15,6 +18,7 @@
     <div id="navigation">
       <ul id="navbar">
         <li><a href="/">Home</a></li>
+        <li><a href="/research/">Research</a></li>
         <li class="selected"><a href="/talks/">Talks</a></li>
         <li><a href="http://blog.alexanderdbrown.com">Blog</a></li>
       </ul>
@@ -30,15 +34,15 @@
       <h2>Talks and Presentations</h2>
       <ul class="no-list">
         <?php 
-          $talks = get_talks('/data/talks');
+          $talks = alexanderdbrown\academia\Talk::get('/data/talks');
           if(empty($talks)) {
-            echo '<li class="no-talks">No Talks</li>';
+            echo '<li class="empty">No Talks</li>';
           } else {
-            foreach(get_talks('/data/talks') as $talk) {
-              $html = '<li class="talk-name"><a href="%s">%s</a>
-                       <li class="talk-event">%s</li>
-                       <li class="talk-date">%s</li>';
-              $date = date('l j<\s\up>S</\s\up> F, Y', strtotime($talk->t_date));
+            foreach($talks as $talk) {
+              $html = '<li class="title"><a href="%s">%s</a>
+                       <li class="conference">%s</li>
+                       <li class="date">%s</li>';
+              $date = date('l j<\s\up>S</\s\up> F, Y', $talk->t_date);
               echo sprintf($html, $talk->t_file, $talk->t_name, $talk->t_event, $date);
             }
           }
