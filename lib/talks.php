@@ -23,5 +23,9 @@ class Talk extends Loadable {
     $temp = explode("\t", rtrim($line));
     return new Talk($temp[0], $temp[1], $temp[2], $temp[3]);
   }
+
+  protected static function get_class() {
+    return __CLASS__;
+  }
 }
 ?>

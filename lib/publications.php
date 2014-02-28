@@ -25,4 +25,8 @@ class Publication extends Loadable {
     $temp = explode("\t", rtrim($line));
     return new Publication($temp[0], $temp[1], $temp[2], $temp[3], $temp[4]);
   }
+
+  protected static function get_class() {
+    return __CLASS__;
+  }
 }
