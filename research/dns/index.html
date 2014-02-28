@@ -8,7 +8,6 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="/default.css" rel="stylesheet" type="text/css" />
     <link href="/desktop.css" rel="stylesheet" type="text/css" />
-    <link href="/publication.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div id="header">
@@ -25,11 +24,11 @@
     <div id="about">
       <h2>Essays</h2>
       <p>
-        Go back to the <a href="/research/#essay">essays</a>
+        Go back to the <a href="/research/#essays">essays</a>
       </p>
     </div>
     <div id="content">
-      <a name="about"></a>
+      <a name="essay"></a>
       <h2>Rapid growth in Top Level Domains in the Domain Name System</h2>
       <p>
         In recent years, the number of 
@@ -50,7 +49,7 @@
         In 2000 and 2004 ICANN successfully applied for and instated fifteen 
         new gTLD and have since gone on to create a program which reviews all
         applications for new 
-        gTLD[<a name="cite-icann2013gtlds" href=#icann2013gtlds">1</a>].
+        gTLD[<a name="cite-icann2013gtlds" href="#icann2013gtlds">1</a>].
       </p>
 
       <h3>Expansion of TLDs</h3>
@@ -59,7 +58,7 @@
         <abbr title="Country Code TLD">ccTLD</abbr>, 42 gTLD (3 of which are 
         restricted use), 15 sponsored TLD, 11 used for testing and 1 
         (<code>.arpa</code>) dedicated to the infrastructure for 
-        DNS[<a name="cite-root2013iana" href="#root2013iana">2</a>].
+        DNS[<a name="cite-iana2013root" href="#iana2013root">2</a>].
       </p>
       <p>
         There are two factors which have spurred the growth of TLDs:
@@ -74,7 +73,7 @@
         2009[<a name="cite-icann2013idns" href="#icann2013idns">3</a>] TLD 
         could only consist of US-ASCII (or "Latin") characters. This changed 
         with the approval of the "IDN ccTLD Fast Track 
-        Process"[<a name="cite-ican2013final" href="#icann2013final">4</a>], 
+        Process"[<a name="cite-icann2013final" href="#icann2013final">4</a>], 
         which allows countries to apply for 
         <abbr title="International Domain Name">IDN</abbr> ccTLD allowing users
         to access domains in their own language or script.
@@ -109,15 +108,337 @@
         explaining the notable factors such as the ability to have 
         self-descriptive domains which clearly identify the area of a business.
       </p>
-      
-      <hr />
-      <h3>Bibliography</h3>
+      <p>
+        There is the counter argument that TLD are becoming 
+        obsolete[<a href="#leiba2009good" name="cite-leiba2009good">6</a>], 
+        tools like search engines and increasingly "intelligent2 web browsers 
+        are reducing the need for domain names. Though this is obviously true, 
+        there is still a need for a human-readable name to access websites; the
+        machine-readable IP addresses are not memorable, or short, enough to 
+        easily distribute. Domain names also play a significant part in SEO, 
+        although according to Google experts, the new gTLD will not have any 
+        kind of preference over existing 
+        TLD[<a href="#cutts2012google" name="cite-cutts2012google">7</a>].
+      </p>
+      <p>
+        Another important factor Berneke details the ability to target a 
+        international demographic through the new non-Latin IDN. For those 
+        demographics which use a non-Latin script, this is a vital element to 
+        reach the whole of the target market.
+      </p>
+      <p>
+        With the addition of new TLD comes with a greater range of choice of 
+        domain names. Before this there were only 22 gTLD and many of these are
+        restricted to specific institutions and organisations, leaving only a 
+        handful of domains remaining for non-ccTLD domains.
+      </p>
+      <p>
+        This has led to the overcrowding of the more popular gTLD; 
+        <code>.com</code>, <code>.org</code> and <code>.net</code> which has, 
+        in turn, ensured that desirable domains are either sparsely available 
+        or expensive to purchase. The arrival of these new gTLD is expected to 
+        alleviate at least some of this overcrowding, but the author expects 
+        that the popular domains will still suffer from this as entrepreneurial
+        people snap up these domains at a cheap price and sell them when the 
+        market prices are higher.
+      </p>
+      <p>
+        A lot of major search engines are now placing increasing importance of 
+        geolocation[<a href="#linkdex2012georanking" 
+                       name="cite-linkdex2012georanking">8</a>] and although a 
+        lot of this can be expressed through ccTLD there are some proposed gTLD 
+        which will encapsulate more specific geolocation through city 
+        information with TLD such as <code>.london</code> or <code>.nyc</code>.
+        Of course the restrictions on this would have to be fairly tight and it
+        may be almost impossible to police. Search engines are therefore likely
+        to take the TLD information with a pinch of salt, but it may open up 
+        the market for products relating to country information, cologne, for 
+        example, could be used for the advertisement of fragrances.
+      </p>
+      <p>
+        In hand with this, the ability to register a TLD for a professional 
+        career, a doctor for example, seems like a ideal way of stopping false
+        advertising. These could prove to be easier to police, but again there 
+        is no guarantee that a person owning a domain with the TLD 
+        <code>.doctor</code> is indeed a doctor.
+      </p>
+      <p>
+        For businesses that can help perform segment focusing, isolating the 
+        target demographics to those TLD which appeal to them, be it art or 
+        football.
+      </p>
+      <p>
+        Even with this, there is already a lot of misinformation and ignorance 
+        as to how the internet really works in the general population that these 
+        gTLD may not be effective as hypothesised.
+      </p>
 
+      <h3>Technical Issues in the Expansion of TLDs</h3>
+      <p>
+        There have not been many technical issues with the root zone of DNS 
+        until fairly recently; two factors had helped in the stabilisation of
+        this [<a href="#manning2011challenges" 
+                 name="cite-manning2011challenges">9</a>]:
+      </p>
+      <ol>
+        <li>There were a fairly small number of TLD, allowing the size of the
+            root to be around 80,000 bytes.</li>
+        <li>TLDs were absorbed very slowly into the root zone and these
+            changes were relatively small.</li>
+      </ol>
+
+      <p>
+       Now, with the introduction of new gTLD and ITLD, there are going to be 
+       many more root zone entries and this increase is happening quite 
+       quickly.
+      </p>
+      <p>
+        Not only are there going to be more TLD required, additional factors
+        like the new IPv6 protocol and  the need for security in DNS through 
+        DNSSEC[<a href="#rfc2535" name="cite-rfc2535">10</a>]. All these 
+        factors combined means that the size of a DNS query or response may not
+        fit inside a 512 byte UDP packet DNS was initially intended to handle.
+      </p>
+      <p>
+        There are several options to cope with this; one approach would be to 
+        send a UDP packet greater than 512 bytes, another would be to use TCP 
+        to handle the sending of packets which are larger than 512 bytes. DNS 
+        itself is able to handle both of these options, but neither are 
+        particularly desirable options.
+      </p>
+      <p>
+        Sending large UDP packets over a network may run into the problem of 
+        requiring fragmentation if size of the path MTU is less than the size 
+        of the packet needing to be sent.
+      </p>
+      <p>
+        The other option, using TCP, has a large amount of overhead involved, 
+        both in terms of packet size in adding the information required to 
+        perform a connection in TCP and also in terms of network traffic for 
+        the three-way handshake and for acknowledging received packets.
+      </p>
+      <p>
+        Both these methods bring about problems when encountering firewalls. 
+        An incorrectly configured firewall might be set to not accept DNS 
+        packets with a size greater than 512 bytes via UDP (the National 
+        Institute of Standards and Technology estimate that DNSSEC will 
+        increase the DNS response size to be <em>at least</em> 2048 bytes), so 
+        a response from a DNSSEC signed response would be dropped by the 
+        firewall.
+      </p>
+      <p>
+        An incorrectly firewall would likely drop DNS traffic sent using TCP, 
+        the alternative for sending larger DNS messages. This means that the 
+        potential worst-case scenario is that DNS traffic signed using DNSSEC
+        would not be resolved at all and it would fall back to using unsigned 
+        DNS messages, but having caused a lot of traffic on the network.
+      </p>
+      <p>
+        The other problem comes with the path MTU size. The guidelines for 
+        using DNSSEC state that the client must be able to accept DNS messages 
+        of at least 2048 bytes, the MTU size of the path these packets would 
+        have to traverse may be limited to a smaller amount, requiring the 
+        packets to be fragmented, which may lead to data loss and redundant 
+        retransmission, or for TCP to be considered, with all of its overheads.
+      </p>
+      <p>
+        This may become less of a problem as the MTU size increases as networks
+        are improved with modern technology, such as fibre optics. But the path
+        MTU is limited by the weakest link in the chain so this may remain a
+        problem for many years to come.
+      </p>
+
+      <h4>DNS Security</h4>
+      <p>
+        In recent years, the need for security in the DNS has become apparent,
+        simple attacks like DNS Spoofing, where the response from a DNS query 
+        is not for the correct server, but instead for a different server, 
+        typically the attackers. One method of doing this is DNS Cache 
+        Poisoning[<a href="#davies2008cache" 
+                     name="cite-davies2008cache">11</a>], where the principal 
+        of saving lookup time by caching results leads to the wrong result 
+        being cached for as long as the TTL of the cache. 
+      </p>
+      <p>
+        This can even affect servers from the root zones when a name server 
+        provides both an authoritative and recursive name service. An attack on
+        the recursive side could lead to an authoritative answer being given 
+        based on bad data. This can even lead to insertions or modification of 
+        domain data inside a TLD.
+      </p>
+      <p>
+        The formal solution to this is to introduce security to the DNS through
+        public key cryptography to sign the responses given by the recursive 
+        DNS lookup, allowing the response to be verified by the client. DNSSEC 
+        is the mechanism used to perform this process.
+      </p>
+      <p>
+        The main issue with DNSSEC is that it is a complex system which 
+        requires a decent level of expertise to set up and is only applicable 
+        to a fairly small proportion of businesses. This, combined with a lack 
+        of application support for DNSSEC means that, at the moment at least, 
+        the reward for implementing DNSSEC is often not worth the 
+        risk[<a href="#rasmussen2011risk" name="cite-rasmussen2011risk">12</a>].
+      </p>
+
+      <h4>DNS Support for IPv6</h4>
+      <p>
+        The DNS cannot be easily extended to support IPv6 addresses, since it 
+        is assumed by clients that a 32-bit IPv4 address will be returned and 
+        not a 128-bit IPv6 address.
+      </p>
+      <p>
+       A new resource record was implemented in DNS to accommodate IPv6 
+       addresses, the AAAA record, by 
+       RFC3596[<a href="#rfc3596" name="cite-rfc3596">13</a>].
+      </p>
+      <p>
+        The main issue brought about by these changes in DNS is the increase of
+        size in the query/response messages due to the four times increase in 
+        number of bit required to represent the IP address.
+      </p>
+
+      <h4>IDNs and Issues with Unicode</h4>
+      <p>
+        There is also the question of the safety of using a non-Latin encoding
+        (e.g. Unicode) where certain characters may look either very similar or
+        even indistinguishable to one 
+        another[<a href="#kaufman2013unicode" 
+                   name="cite-kaufman2013unicode">14</a>]. This can lead to the
+        spoofing of known domain names which attackers could use for malicious 
+        purposes.
+      </p>
+      <p>
+        Of course, the registration of IDN at the root zone is restricted to
+        prevent this[<a href="#icann2011idns" 
+                        name="cite-icann2011idns">15</a>], but that has not 
+        meant that the implementation of IDN has not caused issues with other 
+        areas involving non-Latin encoding, The Homograph 
+        Attack[<a href="#gabrilovich2002homograph" 
+                  name="cite-gabrilovich2002homograph">16</a>], for example.
+      </p>
+
+      <h3>Evaluation</h3>
+      <p>
+        It is obvious that the need for new TLD is an important step; however, 
+        it seems like a step that has taken far too long to put into place. A 
+        lot of arguments are now made that the use of search engines has 
+        deprecated the need for a truly memorable URL, let alone a TLD and 
+        whilst the reserved TLDs for government and educational purposes do 
+        make these institutions easily recognisable and verifiable, the levels 
+        of information the proposed gTLD could offer seem too detailed and too 
+        difficult to police for the little information they would provide to 
+        the user.
+      </p>
+      <p>
+        Another argument one could make against the new TLD is that sites 
+        providing URL shortening or technologies such as QRCode are now more 
+        popular methods of sharing location information more memorably and 
+        would seem to have sprung up as a way around the lack of domains 
+        available.
+      </p>
+      <p>
+        The need for technologies like DNSSEC should be obvious to all users, 
+        but when different technologies like TLS also provide a similar 
+        service, with a lot of added benefits, publicity and only when 
+        required, one does wonder whether the need for it is quite so pressing,
+        especially given the overhead that would be added by DNSSEC especially 
+        if a lot of users have incorrectly configured firewalls, ones on a 
+        router provided by their ISP for example.
+      </p>
+      <p>
+        Of course, DNSSEC is at least an automatic process where domain names 
+        which do not match the signature would be heralded with a large warning
+        from the browser, whilst technologies like TLS are not guaranteed to, 
+        or might be used where users might assume it is (e.g. spoof websites 
+        using HTTP rather than HTTPS would not show any warning).
+      </p>
+      <p>
+        DNS support for IPv6 is already fairly good and even though it does 
+        increase the packet size, it is necessary step to help the widespread
+        adoption of IPv6. One might tentatively predict that the packet size 
+        might be able to become somewhat smaller once IPv4 becomes less 
+        prevalent, but it would undoubtedly be many years before this happens.
+      </p>
+      <hr />
       <ul class="bibliographyi, no-list">
-        <li class="title">New Generic Top-Level Domains: About the Program,</li>
+        <li class="title">[<a name="icann2013gtlds" href="#cite-icann2013gtlds">1</a>] New Generic Top-Level Domains: About the Program</li>
         <li class="author">ICANN</li>
         <li class="date">2013</li>
         <li class="note">Accessed 18/12/2013</li>
+
+        <li class="title">[<a name="iana2013root" href="#cite-iana2013root">2</a>] <a href="http://www.iana.org/domains/root/db">Root Zone Database</a></li>
+        <li class="author">IANA</li>
+        <li class="date">2013</li>
+        <li class="note">Accessed 17/12/2013</li>
+
+        <li class="title">[<a name="icann2013idns" href="#cite-icann2013idns">3</a>] Internationalized Domain Names</li>
+        <li class="author">ICANN</li>
+        <li class="date">2013</li>
+        <li class="note">Accessed 19/12/2013</li>
+
+        <li class="title">[<a name="icann2013final" href="#cite-icann2013final">4</a>] Final Implementation Plan for IDN ccTLD Fast Track Process
+        <li class="author">ICANN</li>
+        <li class="date">5<sup>th</sup> November, 2013</li>
+        <li class="note">Accessed 17/12/2013</li>
+
+        <li class="title">[<a name="berneke2013gtlds" href="#cite-berneke2013gtlds">5</a>] 10 Reasons Why the New Internet Extensions (new gTLDs) Are Important
+        <li class="author">Lutz Berneke</li>
+        <li class="conference">eBrand Services</li>
+        <li class="date">14<sup>th</sup> June, 2013</li>
+
+        <li class="title">[<a name="leiba2009good" href="#cite-leiba2009good">6</a>] The Good and the Bad of Top-Level Domains</li>
+        <li class="author">Barry Leiba</li>
+        <li class="conference">Internet Computing, IEEE, volume 13, pp.66-69</li>
+        <li class="date">9<sup>th</sup> January, 2009</li>
+
+        <li class="title">[<a name="cutts2012google" href="#cite-cutts2012google">7</a>] <a href="https://plus.google.com/+MattCutts/posts/4VaWg4TMM5F">https://plus.google.com/+MattCutts/posts/4VaWg4TMM5F</a></li>
+        <li class="author">Matt Cutts</li>
+        <li class="date">14<sup>th</sup> March, 2012</li>
+        <li class="note">Accessed 21/12/2013</li>
+
+        <li class="title">[<a name="linkdex2012georanking" href="#cite-linkdex2012georanking">8</a>] The Impact of Ranking Variability on Natural Search</li>
+        <li class="author">Linkdex</li>
+        <li class="date">26<sup>th</sup> July, 2012</li>
+
+        <li class="title">[<a name="manning2011challenges" href="#cite-manning2011challenges">9</a>] Infrastructure Challenges to DNS Scaling</li>
+        <li class="author">Bill Manning</li>
+        <li class="conference">The Internet Protocol Journal, volume 14, 4, pp.9-14</li>
+        <li class="date">December, 2011</li>
+
+        <li class="title">[<a name="rfc2535" href="#cite-rfc2535">10</a>] <a href="http://www.rfc-editor.org/rfc/rfc2535.txt">Domain Name System Security Extensions</a></li>
+        <li class="author">D. Eastlake</li>
+        <li class="conference">RFC2535</li>
+        <li class="date">March 1999</li>
+
+        <li class="title">[<a name="davies2008cache" href="#cite-davies2008cache">11</a>] <a href="http://www.iana.org/about/presentations/davies-viareggio-entropyvuln-081002.pdf">DNS Cache Poisoning Vulnerabilities: Explanation and Remedies</a></li>
+        <li class="author">Kim Davies</li>
+        <li class="date">October, 2008</li>
+
+        <li class="title">[<a name="rasmussen2011risk" href="#cite-rasmussen2011risk">12</a>] <a href="http://www.securityweek.com/risk-vs-reward-implementing-dnssec-and-what-enterprises-should-do-today">Risk vs. Reward of Implementing DNSSEC and What Enterprises Should Do Today</a></li>
+        <li class="author">Rod Rasmussen</li>
+        <li class="date">26<sup>th</sup> January, 2011</li>
+        <li class="note">Accessed 27/12/2013</li>
+
+        <li class="title">[<a name="rfc3596" href="#cite-rfc3596">13</a>] <a href="http://www.rfc-editor.org/rfc/rfc3596.txt">DNS Extensions to Support IPv6</a></li>
+        <li class="author">S. Thomson and C. Huitema and V. Ksinant and M. Souissi</li>
+        <li class="conference">RFC3596</li>
+        <li class="date">October, 2008</li>
+
+        <li class="title">[<a name="kaufman2013unicode" href="#cite-kaufman2013unicode">14</a>] <a href="http://www.jefftk.com/p/is-unicode-safe">Is Unicode Safe?</a></li>
+        <li class="author">Jeff Kaufman</li>
+        <li class="date">14<sup>th</sup> June, 2013</li>
+        <li class="note">Accessed 17/12/2013</li>
+
+        <li class="title">[<a name="icann2011idns" href="#cite-icann2011idns">15</a>] Guidelines for the Implementation Of Internationalized Domain Names</li>
+        <li class="author">ICANN</li>
+        <li class="date">2<sup>nd</sup> September, 2011</li>
+
+        <li class="title">[<a name="gabrilovich2002homograph" href="#cite-gabrilovich2002homograph">16</a>] The Homograph Attack</li>
+        <li class="author">Evgeniy Gabrilovich and Alex Gontmakher</li>
+        <li class="conference">Communications of the ACM, volumen 45, 2, pp.128</li>
+        <li class="date">Febuary, 2002</li>
+
       </ul>
     </div>
     <div id="footer">
