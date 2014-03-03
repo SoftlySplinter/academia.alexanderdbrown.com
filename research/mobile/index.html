@@ -1,0 +1,503 @@
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Alexander D Brown</title>
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/default.css" rel="stylesheet" type="text/css" />
+    <link href="/desktop.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Alexander D Brown</h1>
+    </div>
+    <div id="navigation">
+      <ul id="navbar">
+        <li class="selected"><a href="/">Home</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        <li><a href="http://blog.alexanderdbrown.com">Blog</a></li>
+      </ul>
+    </div>
+    <div id="about">
+      <h2>Essays</h2>
+      <p>
+        Go back to the <a href="/research/#essays">essays</a>
+      </p>
+    </div>
+    <div id="content">
+      <a name="essay"></a>
+      <h2>Mobile Devices have made us the most monitored individuals in history</h2>
+      <p class="foreward">
+        This was an marked essay as part of my university degree, but as it was
+        such an interesting subject to research I thought it would be good to
+        put up online.
+      </p>
+
+      <h3>Introduction</h3>
+      <p>
+        There has been a lot of news in the press in the last year about 
+        surveillance programs run by many countries security agencies, 
+        particularly focused on the collection of phone records by the National
+        Security Agency (NSA)[<a href="#Xgreenwald2013nsa" id="cite-Xgreenwald2013nsa">1</a>]. 
+      </p>
+      <p>
+        It comes as no surprise that this has brought about the question:
+      </p>
+      <blockquote>
+        "Have mobile devices made us the most monitored individuals in 
+         history?"
+      </blockquote>
+      <p>
+        To fully understand the depth of this question, one must consider the 
+        technical methods which are employed to monitor mobile devices and how 
+        these methods differ across different mobile platforms. In hand with 
+        this, one must investigate the methods for preventing unwanted 
+        monitoring on mobile devices and how effective these methods really 
+        are.
+      </p>
+      <p>
+        Finally there are many legal and professional issues which govern the 
+        collection of data from mobile devices; but there are also a host of 
+        ethical and social issues which legal and professional element cannot, 
+        necessarily, cover.
+      </p>
+      <p>
+        Of course monitoring of data, especially from mobile devices, doesn't 
+        have to be used for nefarious purposes. Applications commonly use data 
+        mining techniques to provide a better experience for their users and 
+        cloud services are so popular that imagining a world where all a users
+        data is stored solely on a single device is almost impossible.
+      </p>
+
+      <h3>Technical Methods for Monitoring Mobile Devices</h3>
+      <p>
+        Because of the structure of the Global System for Mobile Communications
+        (GSM), any mobile device which accesses the mobile network can be 
+        tracked to, at worst, the nearest cell tower. In fact the NSA is known 
+        to use this data to track targets and identify possible accomplices[<a 
+        href="#Xclassified2012co-travel" id="cite-Xclassified2012co-travel">2</a>]. There are also other stories of
+        UK public organisations performing similar actions[<a 
+        href="#Xgallager2011met" id="cite-Xgallager2011met">3</a>][<a href="#Xhopkins2013gchq" id="cite-Xhopkins2013gchq">4</a>].
+      </p>
+      <p>
+        Though this is a worrying concept, there is some important information
+        that the U.S. has given in [<a href="#Xclapper2013facts" id="cite-Xclapper2013facts">5</a>] which 
+        denies that any information collected cannot be used to target any 
+        individual without a prior specific and documented reason to do so. In 
+        the case of monitoring of non-U.S. citizens there must also be a 
+        agreement with the country of their citizenship.
+      </p>
+      <p>
+        It is the monitoring which the users agrees to have performed upon them
+        that is perhaps more worrying.
+      </p>
+      <p>
+        Mobile devices, especially tablets and smart phones, have a range of 
+        sensors which third-party applications may be able to access. These 
+        sensors typically include a camera, microphone, WiFi antenna and GPS 
+        system. As technology progresses the accuracy of these sensors is 
+        increasing and other sensors such as accelerometers are becoming more
+        prevalent.
+      </p>
+      <p>
+        It could, therefore, be easy for an attacker to write a malicious 
+        application which simply monitored the GPS location of a person or 
+        recorded their conversations through the microphone. Or even use any of
+        these systems combined to gather a lot of sensitive data.
+      </p>
+      <p>
+        There have been cases which have been formally investigated[<a 
+        href="#Xftc2013flashlight" id="cite-Xftc2013flashlight">6</a>] in which legitimate applications 
+        collect data from users on the side, which are then sold to other 
+        companies for advertisement revenue.
+      </p>
+      <p>
+        However, a lot of applications have legitimate uses for these sensors.
+        Most applications
+        require network access to load data from external servers. More 
+        specific applications, which perform tasks like route tracking, will 
+        require the use of more than one of these sensors.
+      </p>
+
+      <h3>Protection Against Unwanted Monitoring</h3>
+      <p>
+        Unfortunately, due to the structure of the GSM network, as long as a 
+        mobile device is on and allowed to connect to the network it can be 
+        tracked. With the addition of a Subscriber Identity Module (SIM) card 
+        it can even be tied to a specific individual. Under [<a 
+        href="#Xdirective2006/24/EC" id="cite-Xdirective2006/24/EC">7</a>] 
+        organisations can even request this information from GSM network 
+        providers.
+      </p>
+      <p>
+        Modern mobile platforms typically have some sort of security system and
+        ways in which applications can be given access to secure elements of in
+        the mobile device. Most of these platforms sandbox third-party 
+        application allowing the kernel to control the access to the various 
+        facilities of the device.
+      </p>
+
+      <h4>Android Security Facilities</h4>
+      <p>
+        [<a href="#Xgoogle2013security" id="cite-Xgoogle2013security">8</a>] 
+        describes the methods that the Android system uses to secure the 
+        environment. The main advantage Android gains in this area is that uses
+        Security-Enhanced Linux (SELinux), which confines the access of 
+        programs based on different policies.
+      </p>
+      <p>
+        Android adds many features on top of this, the most applicable of these
+        to the question of monitoring is the permission model. For a third 
+        party application to access protected APIs such at GPS positioning or
+        network connections they must implicitly define which of these elements
+        they require in the manifest file of the application.
+      </p>
+      <p>
+        This information is displayed to the user when they first install the 
+        application and when the application updates to add new access to 
+        secure APIs.
+      </p>
+      <p>
+        There are also certain APIs which are not available to third-party 
+        applications, but which may be used by pre-installed applications if 
+        they are signed as part of the OS.
+      </p>
+      <p>
+        Because applications are sandboxed from one another it should be an 
+        impossible task to gain confidential information from another 
+        application, unless it provides it somehow.
+      </p>
+
+      <h5>Additional Security Features Provided by the Google Play Store</h5>
+
+      <p>
+        Obviously, telling legitimate use of secure API elements from 
+        illegitimate use is not an easy task, especially for automated systems.
+      </p>
+      <p>
+        In the mobile ecosystem, the typical method of performing this is to 
+        have a trusted place, where developers can distribute their 
+        applications. In the case of Android this is usually the Google Play 
+        store, however other stores such as the Amazon Appstore do also exist.
+      </p>
+      <p>
+        The maintainers of such places can then regulate the applications 
+        accepted, monitor them for any malicious activities and remove them 
+        where needed. Google even added a service in 2012 which scanned the 
+        Play store for applications with a malicious intent by running them on 
+        a range of emulated services[<a href="#Xlockheimer2012android" 
+        id="cite-Xlockheimer2012android">9</a>].
+      </p>
+
+      <h4>iOS Security Facilities</h4>
+      <p>
+        [<a href="#Xapple2012security" id="cite-Xapple2012security">10</a>] 
+        defines the methods that the iOS system uses to secure the environment.
+        Similar to Android iOS third-party applications are sandboxed from each
+        other, although a lot of this is done by the iOS runtime. All 
+        applications have their own file spaces which can only be accessed 
+        through the iOS defined API.
+      </p>
+      <p>
+        Access to secure API elements is defined through entitlements; signed 
+        key-value pairs specific to applications. However, it should be noted 
+        that these entitlements are not required to access elements such as the
+        GPS or microphone and are more typically used by system applications 
+        and daemons to perform tasks that would typically require root access.
+      </p>
+      <p>
+        The iOS ecosystem is heavily reliant on the Apple App Store to provide 
+        security against the malicious collection of data from iOS 
+        applications. Because all applications have to be reviewed before being
+        accepted into the Apple App Store, and because it is difficult to 
+        install applications not from the App Store, ones with a malicious 
+        purpose are somewhat unlikely to be accepted.
+      </p>
+      <p>
+        [<a href="#Xapple2010review" id="cite-Xapple2010review">11</a>] depicts
+        these guidelines. These guidelines state that the application must gain
+        user consent before using location data and transmitting user data. Any
+        application which doesn't adhere to these guidelines will be rejected.
+      </p>
+
+      <h3>Implications of Mobile-based Monitoring</h3>
+      <p>
+        This section will focus on the four main implications of developing 
+        software which gathers data from mobile devices; legal, professional, 
+        social and ethical.
+      </p>
+
+      <h4>Legal Implications</h4>
+      <p>
+        There are several laws which govern the legalities of computer software
+        and the storage of personal data. The notable laws which apply to the
+        monitoring of data gathered by mobile devices are:
+      </p>
+      <ul>
+        <li>Data Protection Act[<a href="#Xdpa1998" id="cite-Xdpa1998">12</a>]</li>
+        <li>Computer Misuse Act[<a href="#Xcma1990" id="cite-xcma1990">13</a>]</li>
+      </ul>
+      <p>
+        Other laws may still apply to the process of developing the software 
+        which performs this, but are less relevant to the actual collection of 
+        data.
+      </p>
+
+      <h5>Impacts of the Data Protection Act</h5>
+      <p>
+        Monitoring data undoubtedly also means storing data and any 
+        computerised data falls under the Data Protection Act; therefore, any 
+        monitoring is going to be affected by the Data Protection Act.
+      </p>
+      <p>
+        Information Commissioner's Office (ICO) has released guidelines[<a 
+        href="#Xico2012cloud" id="cite-Xico2012cloud">14</a>] on the use of 
+        cloud computing and how it can be kept legal within the Data Protection
+        Act. These mainly state that it is essential to have a contract in 
+        place with a trusted cloud storage provider that will adhere to UK law.
+        This might be especially difficult with many cloud providers being 
+        non-UK or even -EU based.
+      </p>
+<!--l. 229--><p>   The EU has made agreements with the US government for a safe harbour for private data
+that could be stored on US servers[<a 
+href="#Xeu2000safe">15</a>], this does help with some issues that storing data on
+a non-EU cloud, but given the way in which clouds tend to operate, there is no
+non-contractual way in which this can be guaranteed.
+      </p>
+ <h5>Impacts of the Computer Misuse Act</h5>
+<!--l. 236--><p>The Computer Misuse Act does not affect the use of mobile devices for monitoring purposes
+as much as one would suspect. The main issue comes that section 1 of this act defines
+misuse as &#8220;the unauthorised access to computer material&#8221;[<a 
+href="#Xcma1990">13</a>]. Sections 2 and 3 also define
+other forms of misuse, but as monitoring would fall under the access of computer material,
+they do not apply.
+      </p>
+<!--l. 243--><p>   The problem comes that the access could be implied simply by the user installing the
+application. Most applications will also have terms and conditions or will be distributed in
+such a way that the user is accepting the access to information providing by sensors before
+they install the application (e.g. the Android permission system).
+      </p>
+<!--l. 249--><p>   Obviously, if an application could hide the fact it was collecting data from a permission
+system and does not disclose this use in terms and conditions, then an argument could be
+made that it is breaking this act.
+      </p>
+
+ <h4>Professional Implications</h4>
+<!--l. 256--><p>Section 1.a of the BSC Code of Conduct states that &#8220;[You shall] have due regard for the
+public health, privacy, security and wellbeing of others and the environment&#8221;[<a 
+href="#Xbsc2011conduct">16</a>]. This would
+imply that you must secure any data collected through the monitoring of mobile devices.
+Having due regard for an individuals privacy, might also imply that the results of the
+monitoring must be kept private, and not, for example, sold to another company to generate
+revenue.
+      </p>
+<!--l. 264--><p>   Section 2.f also discusses avoidance of malicious and negligent action which could imply
+that any professional should not be developing a system which monitors mobile devices for
+malicious purposes.
+      </p>
+
+ <h4>Social Implications</h4>
+<!--l. 271--><p>There is a lot of good that can come from the monitoring of mobile devices and as mentioned
+there may be many good reasons for application developers to perform monitoring. Android
+4.0 added the ability to monitor roaming data usage, so a user could set a warning
+message when they reach a certain amount of usage, and to cap their usage at a
+different limit[<a 
+href="#Xandroid2011ics">17</a>]; this feature gives the user more control over the use of their mobile
+phone, and prevents them from spending more than they need to on their phone
+bill.
+      </p>
+<!--l. 279--><p>   Given that less that 1% of all UK premises receive no 3G connection from any provider
+and that only around 23% of all geographical areas in the UK receive no 3G connection from
+any provider[<a 
+href="#Xoffcom2013infastructure">18</a>] and that the figures for 2G connections are even less, it is difficult to not be
+connected to a form of network. With the recent adoption of 4G networks these figures are
+likely to decrease even further.
+      </p>
+<!--l. 286--><p>   Given that a lot of services provide synchronisation to the cloud, it is difficult to escape
+the pressures of work when emails can be delivered to a mobile device so easily. There have
+been studies into the affects of using email constantly against taking vacations from
+emails leading to reduced stress and increased productivity[<a 
+href="#Xmark2012pace">19</a>]. Similar studies
+have also been performed on the mental welfare through the increased use of
+Facebook[<a 
+href="#Xkross2013facebook">20</a>], where increased use lead to the increased chances of depression in young
+adults.
+      </p>
+<!--l. 295--><p>   Monitoring data could be one of the possible reasons why there are such stresses in
+modern day life, but it could also allow stress to be reduced by limiting access to certain
+applications or suggesting improvements to fitness and diet.
+      </p>
+
+ <h4>Ethical Implications</h4>
+<!--l. 302--><p>The final consideration is that of ethics; it may be legal, professional and socially acceptable
+to develop an application which monitors some information from a users device, but the
+purpose or reasons for doing so may not be ethical.
+      </p>
+<!--l. 307--><p>   Of course ethics are a very personal viewpoint, to help standardise ethics, the Computer
+Ethics Institute has released ten commandments[<a 
+href="#XceiXcommandments">21</a>] which, if followed, would deem a
+application ethical.
+      </p>
+<!--l. 311--><p>   The author has his own views on what makes an application ethical; using Android as an
+example, there should be a reasonable explanation as to why an application wants to access
+a protected API and this reason should be presented to the user, rather than just the protect
+API elements an application has.
+      </p>
+
+ <h3>Conclusions</h3>
+<!--l. 318--><p>Yes, mobile devices have probably aided in being the most monitored individuals in
+history. To say mobile devices are the only reason for this would be an unsound
+argument; though location could be seen as more sensitive than internet history, for
+example.
+      </p>
+<!--l. 323--><p>   Mobile devices just add a lot more ways in which individuals can be monitored; however,
+the access to these systems is more strictly controlled compared to the standard PCs or
+laptops. Whilst this is a good step in the right direction, there are also additional items which
+cannot be so strictly controlled as it is stored one systems external to the device (i.e. the
+GSM network).
+      </p>
+
+      <hr />
+
+      <ul class="bibliography, no-list" >
+        <li class="title">[<a href="#cite-Xgreenwald2013nsa" id="Xgreenwald2013nsa">1</a>] <a href="http://www.theguardian.com/world/2013/jun/06/nsa-phone-records-verizon-court-order">NSA collecting phone records of millions of Verizon customers daily</a></li>
+        <li class="author">G. Greenwald, E. MacAskill, and S. Ackerman</li>
+        <li class="conference">The Guardian</li>
+        <li class="date">June, 2013</li>
+        <li class="note">Accessed 15/01/2014</li>
+        
+        <li class="title">[<a id="Xclassified2012co-travel" href="#cite-Xclassified2012co-travel">2</a>] Summary  of  DNR  and  DNI  Co-Travel  Analytics</li>
+        <li class="author">NSA</li>
+        <li class="date">1<sup>st</sup> October, 2012</li>
+
+        <li class="title">[<a id="Xgallager2011met" href="#cite-Xgallager2011met">3</a>] <a href="http://www.theguardian.com/uk/2011/oct/30/metropolitan-police-mobile-phone-surveillance">Met police using surveillance system to monitor mobile phones</a></li>
+        <li class="author">R. Gallagher and R. Syal</li>
+        <li class="conference">The Guardian</li>
+        <li class="date">30<sup>th</sup> October 2011</li>
+        <li class="note">Accessed 15/01/2014</li>
+
+        <li class="title">[<a id="Xhopkins2013gchq" href="#cite-Xhopkins2013gchq">4</a>] <a href="http://www.theguardian.com/technology/2013/jun/07/uk-gathering-secret-intelligence-nsa-prism">UK gathering secret intelligence via covert NSA operation</a></li>
+        <li class="author">N. Hopkins</li>
+        <li class="conference">The  Guardian</li>
+        <li class="date">7<sup>th</sup> June  2013</li>
+        <li class="note">Accessed 15/01/2014</li>
+
+        <li class="title">[<a id="Xclapper2013facts" href="#cite-Xclapper2013facts">5</a>] Facts on the Collection of Intelligence Pursuant to Section 702 of the Foreign Intelligence Surveillence Act</li>
+        <li class="author">J.&#x00A0;R. Clapper, U.S. Director of National Intelligence</li> 
+        <li class="date">8<sup>th</sup> June 2013</li>
+
+        <li class="title">[<a id="Xftc2013flashlight" href="#cite-Xftc2013flashlight">6</a>] <a href="http://www.ftc.gov/news-events/press-releases/2013/12/android-flashlight-app-developer-settles-ftc-charges-it-deceived">Android Flashlight App Developer Settles FTC Charges It Deceived Consumers</a></li>
+        <li class="author">Fedral Trade Commission</li>
+        <li class="date">5<sup>th</sup> December 2013</li>
+     </p>
+     <p class="bibitem" >
+  [7]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xdirective2006/24/EC" href="#cite-Xdirective2006/24/EC"></a>&#8220;Directive 2006/24/EC of the european parliament and of the council,&#8221; <span 
+class="phvro7t-x-x-120">Official
+     <span 
+class="phvro7t-x-x-120">Journal of the European, 15&#x00A0;Mar. 2006.
+                                                                                      
+                                                                                      
+     </p>
+     <p class="bibitem" >
+  [8]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xgoogle2013security" href="#cite-Xgoogle2013security"></a><span 
+class="phvro7t-x-x-120">Android Security Overview, The Android Open Source Project, [Accessed Jan.
+     15, 2014]. [Online]. Available: <a 
+href="http://source.android.com/devices/tech/security/" class="url" >http://source.android.com/devices/tech/security/</a>
+     </p>
+     <p class="bibitem" >
+  [9]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xlockheimer2012android" href="#cite-Xlockheimer2012android"></a>H.&#x00A0;Lockheimer,         &#8220;Android         and         Security,&#8221;         blog,         2&#x00A0;Feb.
+     2012,         [Accessed         Jan.         17,         2014].         [Online].         Available:
+     <a 
+href="http://officialandroid.blogspot.co.uk/2012/02/android-and-security.html" class="url" >http://officialandroid.blogspot.co.uk/2012/02/android-and-security.html</a>
+     </p>
+     <p class="bibitem" >
+ [10]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xapple2012security" href="#cite-Xapple2012security"></a><span 
+class="phvro7t-x-x-120">iOS      Security,      Apple      Inc.,      Oct.      2012.      [Online].      Available:
+     <a 
+href="https://www.apple.com/ipad/business/docs/iOS_Security_Oct12.pdf" class="url" >https://www.apple.com/ipad/business/docs/iOS_Security_Oct12.pdf</a>
+     </p>
+     <p class="bibitem" >
+ [11]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xapple2010review" href="#cite-Xapple2010review"></a><span 
+class="phvro7t-x-x-120">App Store Review Guidelines, 2010.
+     </p>
+     <p class="bibitem" >
+ [12]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xdpa1998" href="#cite-Xdpa1998"></a><span 
+class="phvro7t-x-x-120">Data Protection Act 1998.    United Kingdom Act of Parliament, 1998, ch.&#x00A0;29.
+     </p>
+     <p class="bibitem" >
+ [13]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xcma1990" href="#cite-Xcma1990"></a><span 
+class="phvro7t-x-x-120">Computer Misuse Act 1990.  United Kingdom Act of Parliament, 1990, ch.&#x00A0;18.
+     </p>
+     <p class="bibitem" >
+ [14]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xico2012cloud" href="#cite-Xico2012cloud"></a>&#8220;Guidance on the use of cloud computing,&#8221; 2&#x00A0;Oct. 2012. [Online]. Available:
+     <a 
+href="http://ico.org.uk/~/media/documents/library/Data_Protection/Practical_application/cloud_computing_guidance_for_organisations.ashx" class="url" >http://ico.org.uk/<span 
+class="cmsy-8">~/media/documents/library/Data_Protection/Practical_application/cloud_computing_guidance_for_organisations.ashx</a>
+     </p>
+     <p class="bibitem" >
+ [15]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xeu2000safe" href="#cite-Xeu2000safe"></a>&#8220;Commission  decision  pursuant  to  Directive  95/46/EC  of  the  European
+     Parliament and of the Council on the adequacy of the protection provided by the
+     safe harbour privacy principles and related frequently askedquestions issued by
+     the US Department of Commerce,&#8221; <span 
+class="phvro7t-x-x-120">Official Journal of the European Communities,
+     pp. 0007&#8211;0047, 26&#x00A0;Jul. 2000.
+     </p>
+     <p class="bibitem" >
+ [16]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xbsc2011conduct" href="#cite-Xbsc2011conduct"></a>&#8220;Code  of  Conduct  for  BSC  Members,&#8221;  BCS,  The  Chartered  Institute  for  IT,
+     8&#x00A0;Jun. 2011.
+                                                                                      
+                                                                                      
+     </p>
+     <p class="bibitem" >
+ [17]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xandroid2011ics" href="#cite-Xandroid2011ics"></a><span 
+class="phvro7t-x-x-120">Ice      Cream      Sandwich,      The      Android      Open      Source      Project,
+     19&#x00A0;Oct.      2011,      [Accessed      Jan.      20,      2014].      [Online].      Available:
+     <a 
+href="http://developer.android.com/about/versions/android-4.0-highlights.html" class="url" >http://developer.android.com/about/versions/android-4.0-highlights.html</a>
+     </p>
+     <p class="bibitem" >
+ [18]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xoffcom2013infastructure" href="#cite-Xoffcom2013infastructure"></a>&#8220;Infrastructure Report 2013 Update,&#8221; Offcom, 24&#x00A0;Oct. 2013.
+     </p>
+     <p class="bibitem" >
+ [19]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xmark2012pace" href="#cite-Xmark2012pace"></a>G.&#x00A0;Mark,  S.&#x00A0;Voida,  and  A.&#x00A0;Cardello,  &#8220;A  pace  not  dictated  by  electrons:  an
+     empirical study of work without email,&#8221; in <span 
+class="phvro7t-x-x-120">Proceedings of the SIGCHI Conference
+     <span 
+class="phvro7t-x-x-120">on Human Factors in Computing Systems.    ACM, 2012, pp. 555&#8211;564.
+     </p>
+     <p class="bibitem" >
+ [20]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="Xkross2013facebook" href="#cite-Xkross2013facebook"></a>E.&#x00A0;Kross, P.&#x00A0;Verduyn, E.&#x00A0;Demiralp, J.&#x00A0;Park, D.&#x00A0;S. Lee, N.&#x00A0;Lin, H.&#x00A0;Shablack,
+     J.&#x00A0;Jonides,  and  O.&#x00A0;Ybarra,  &#8220;Facebook  use  predicts  declines  in  subjective
+     well-being in young adults,&#8221; <span 
+class="phvro7t-x-x-120">PloS one, vol.&#x00A0;8, no.&#x00A0;8, p. e69841, 2013.
+     </p>
+     <p class="bibitem" >
+ [21]&#x00A0;&#x00A0;&#x00A0;<a 
+ id="XceiXcommandments" href="#cite-XceiXcommandments"></a>&#8220;Ten      Commandments      of      Computer      Ethics,&#8221;      Compter      Ethics
+     Institute,        [Accessed        Jan.        20,        2014].        [Online].        Available:
+     <a 
+href="http://computerethicsinstitute.org/publications/tencommandments.html" class="url" >http://computerethicsinstitute.org/publications/tencommandments.html</a>
+</p>
+      </ul>
+    </div>
+    <div id="footer">
+    </div>
+  </body>
+</html>
