@@ -1,7 +1,12 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Alexander D Brown" />
+    <meta name="description" content="Website of a 5th year MEng Software Engineering student" />
+    <meta name="keywords" content="Aberystwyth, Computer Science, Open Source" />
 
     <title>Alexander D Brown</title>
 
@@ -10,52 +15,58 @@
     <link href="/desktop.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="header">
+    <header id="header">
       <h1>Alexander D Brown</h1>
-    </div>
-    <div id="navigation">
+    </header>
+    <nav id="navigation">
       <ul id="navbar">
         <li class="selected"><a href="/">Home</a></li>
         <li><a href="/research/">Research</a></li>
         <li><a href="/talks/">Talks</a></li>
         <li><a href="http://blog.alexanderdbrown.com">Blog</a></li>
       </ul>
-    </div>
-    <div id="content">
-      <a name="about"></a>
-      <h2>About</h2>
-      <p>
-        I'm a 5<sup>th</sup> year Master of Engineering (MEng) in Software 
-        Engineering student. I have performed research into dating artwork from
-        catalogue photographs, the affects of Top Level Domains in the Domain
-        Name System and the impacts and implications of Mobile Devices in
-        monitoring people.
-      </p>
-      <p>
-        You can find more about my published work on the 
-        <a href="/research/#publications">publications</a> page and some of my lesser
-        research on the <a href="/research/#essays">essays</a> page.
-      </p>
+    </nav>
+    <section id="content">
+      <article id="aboutme">
+        <header>
+          <h2>About</h2>
+        </header>
+        <p>
+          I'm a 5<sup>th</sup> year Master of Engineering (MEng) in Software 
+          Engineering student. I have performed research into dating artwork from
+          catalogue photographs, the affects of Top Level Domains in the Domain
+          Name System and the impacts and implications of Mobile Devices in
+          monitoring people.
+        </p>
+        <p>
+          You can find more about my published work on the 
+          <a href="/research/#publications">publications</a> page and some of my lesser
+          research on the <a href="/research/#essays">essays</a> page.
+        </p>
+      </article>
 
-      <a name="teach"></a>
-      <h3>Teaching</h3>
-      <p>
-        I am an Advisor and Demonstrator within the Aberystwyth University 
-        Department of Computer Science and am a BCU qualified Kayaking Coach.
-        I've also helped with 
-        <a href="http://www.technocamps.com/">Technocamps</a> and other STEM 
-        evenets, including organising a Java Masterclass at 
-        <a href="http://swanmore-school.co.uk/">Swanmore Schoo of Technoogy</a>.
-      </p>
-    </div>
-    <div id="about">
+      <article id="teaching">
+        <header>
+          <h3>Teaching</h3>
+        </header>
+        <p>
+          I am an Advisor and Demonstrator within the Aberystwyth University 
+          Department of Computer Science and am a BCU qualified Kayaking Coach.
+          I've also helped with 
+          <a href="http://www.technocamps.com/">Technocamps</a> and other STEM 
+          evenets, including organising a Java Masterclass at 
+          <a href="http://swanmore-school.co.uk/">Swanmore School of Technoogy</a>.
+        </p>
+      </article>
+    </section>
+    <section id="about">
       <h2>More</h2>
       <p>
         More content can be found on my 
         <a href="http://blog.alexanderdbrown.com/">blog</a>.
       </p>
-    </div>
-    <div id="footer">
-    </div>
+    </section>
+    <footer id="footer">
+    </footer>
   </body>
 </html>
