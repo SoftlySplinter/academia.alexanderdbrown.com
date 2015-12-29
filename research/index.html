@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Alexander D Brown</title>
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/default.css" rel="stylesheet" type="text/css" />
+    <link href="/desktop.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Alexander D Brown</h1>
+    </header>
+    <nav id="navigation">
+      <ul id="navbar">
+        <li><a href="/">Home</a></li>
+        <li class="selected"><a href="/research/">Research</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        <li><a href="http://blog.alexanderdbrown.com">Blog</a></li>
+      </ul>
+    </nav>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        My current and previous research, including
+        <a href="#publications">publications</a> and 
+        <a href="#essays">essays</a>.
+      </p>
+    </section>
+    <section id="content">
+      <article id="publications_content" name="publications">
+        <header><h2>Publications</h2></header>
+        <ul id="publications" class="no-list"></ul> 
+      </article>
+      <article id="essays-content" name="essays"></a>
+        <header><h2>Essays</h2></header>
+        <ul id="essays" class="no-list"></ul>
+      </article>
+    </section>
+    <footer id="footer">
+    </footer>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+  <script>
+(function(load) {
+  load(window.jQuery, window, document);
+}(function($, window, document) {
+  $(function() {
+    $.getJSON('http://api.alexanderdbrown.com/work/publications', function(data) {
+      var publications = $('#publications');
+      data.sort(function(a, b) {
+        return a.date > b.date;
+      })
+      data.forEach(function(publication) {
+        publications.append('<li class="title"><a href="http://api.alexanderdbrown.com/work/publications/' + publication.id + '">' + publication.title + '</a></li>')
+        .append('<li class="author">' + publication.authors.join(', ') + '</li>')
+        .append('<li class="conference">' + publication.location + '</li>')
+        .append('<li class="date">' + new Date(publication.date).toLocaleDateString() + '</li>');
+      });
+    });
+    $.getJSON('http://api.alexanderdbrown.com/work/writing', function(data) {
+      var essays = $('#essays');
+      data.sort(function(a, b) { 
+        return a.date < b.date;
+      });
+      data.forEach(function(essay) {
+        essays.append('<li class="title"><a href="http://api.alexanderdbrown.com/work/writing/' + essay.id + '">' + essay.title + '</a></li>')
+        .append('<li class="author">' + essay.authors.join(', ') + '</li>')
+        .append('<li class="date">' + new Date(essay.date).toLocaleDateString() + '</li>');
+      });
+    });
+  });
+}));
+    </script>  
+  </body>
+</html>
